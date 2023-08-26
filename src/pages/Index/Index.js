@@ -20,7 +20,6 @@ function Index() {
         {" "}
         New Jersey
       </font>
-
       <font face="Perpetua" color="#008000" size="6">
         ,&nbsp; &nbsp;&nbsp;{" "}
       </font>
