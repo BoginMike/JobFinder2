@@ -68,8 +68,8 @@ function App() {
             </ProtectedRoute>
           }
         ></Route>
-        {/* <Route path="/" element={<Login />}></Route> */}
-        <Route path="/" element={<Home />}></Route>
+        <Route path="/" element={<Login />}></Route>
+        // <Route path="/" element={<Home />}></Route>
         <Route path="*" element={<NotFoundPage />}></Route>
       </Routes>
     </div>
