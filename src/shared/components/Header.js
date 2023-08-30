@@ -1,8 +1,9 @@
 import React, { useEffect, useState, Fragment } from "react";
 import jwt_decode from "jwt-decode";
-import { Avatar } from "@mui/material";
-import LogoutIcon from "@mui/icons-material/Logout";
-import { useNavigate } from "react-router-dom";
+// import { Avatar } from "@mui/material";
+// import LogoutIcon from "@mui/icons-material/Logout";
+import { getApiCall } from "../../shared/api-utils";
+// import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import twit from "../../pages/Index/webimages/twitter.png";
 import face from "../../pages/Index/webimages/facebook.png";
@@ -15,29 +16,29 @@ import wash from "../../pages/Index/webimages/washington-dc2.jpg";
 import AC from "../../pages/Index/webimages/ac1.jpg";
 
 export default function Header() {
-  const [username, setUsername] = useState("");
-  const [profilePicture, setProfilePicture] = useState("");
+  const [username, setUsername] = useState("guest");
+  const [password, setPassword] = useState("guest");
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   useEffect(() => {
-   if (token) {
     let token = localStorage.getItem("token");
-    let decoded = jwt_decode(token);
-    setUsername(decoded.username);
-    setProfilePicture(decoded.profilePicture); }
-  }, []);
-
-  function logout() {
-    if (window.confirm("Are you sure want to logout?")) {
-      localStorage.clear();
-      navigate("/login");
+    if (token) {
+      let decoded = jwt_decode(token);
+      setUsername(decoded.username);
+    } else {
+      getApiCall("/users/generate-token", {
+        username: username,
+        password: password,
+      }).then((response) => {
+        // response is json response sent from the server
+        if (response.token) {
+          // username and passord is correct and token is generated successfully.
+          localStorage.setItem("token", response.token);
+        }
+      });
     }
-  }
-
-  function showProfilePage() {
-    navigate("/profile");
-  }
+  }, [username, password]);
 
   return (
     <Fragment>
@@ -197,22 +198,11 @@ export default function Header() {
         </p>
       </blockquote>
 
-    <div className="app-header">
-      <div>
-        <h1>Hi {username}</h1>
-        <span onClick={showProfilePage}>
-          <Avatar
-            src={process.env.REACT_APP_BASE_URL + "/image/" + profilePicture}
-          />
-        </span>
-        <span onClick={logout}>
-          <LogoutIcon />
-        </span>
+      <div className="app-header">
+        <div>
+          <Navbar />
+        </div>
       </div>
-      <div>
-        <Navbar />
-      </div>
-    </div>
     </Fragment>
   );
 }
