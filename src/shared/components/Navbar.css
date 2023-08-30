@@ -51,6 +51,13 @@
   margin-left: 500px;
 }
 
+.RLnav-links {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  margin-left: 500px;
+  pointer-events: none;
+}
 .nav-links:hover {
   background-color: #1888ff;
   border-radius: 4px;
@@ -61,6 +68,13 @@
   background-color: #1888ff;
   border-radius: 4px;
   transition: all 0.2s ease-out;
+}
+
+.RLnav-links:hover {
+  background-color: #1888ff;
+  border-radius: 4px;
+  transition: all 0.2s ease-out;
+  pointer-events: none;
 }
 
 .fa-bars {
