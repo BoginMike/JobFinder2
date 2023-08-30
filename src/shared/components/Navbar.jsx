@@ -80,12 +80,12 @@ export default function Navbar() {
                 <span className='app-link'>
                     Song List
                 </span>
-            </Link>
-            <Link to={'/books-list'}>
+            </Link>*/}
+            <Link to={'/add-zip'}>
                 <span className='app-link'>
-                    Book List
+                    Add Zip Code
                 </span>
-            </Link> */}
+            </Link> 
             <Link
             onMouseLeave={onMouseLeave}
             to={'/login'}>
