@@ -5,7 +5,8 @@ import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
 import Home from "./pages/Index/Index";
 import AboutUs from "./pages/AboutUs/About";
-import AddSong from "./pages/AddSong/AddSong";
+// import AddSong from "./pages/AddSong/AddSong";
+import AddZip from "./pages/AddZip/AddZip";
 import Chat from "./pages/Chat/Chat";
 import RentalEquipment from "./pages/RentalEquipment/RentalEquipment";
 import Locations from "./pages/LocationsServed/LocationsServed";
@@ -33,10 +34,10 @@ function App() {
         <Route path="/bwprinter" element={<BwPrinter />}></Route>
         <Route path="/clrprinter" element={<ColorPrinter />}></Route>
         <Route
-          path="/add-song"
+          path="/add-zip"
           element={
             <ProtectedRoute>
-              <AddSong />
+              <AddZip />
             </ProtectedRoute>
           }
         ></Route>
@@ -56,4 +57,3 @@ function App() {
 }
 
 export default App;
-
