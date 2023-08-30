@@ -40,7 +40,7 @@ function LocationsServed() {
     // on page load this code will ge execute
     // componentDidMount()
 
-    getApiCall("/bwprinters").then((response) => {
+    getApiCall("/zips").then((response) => {
       if (response?.status === false) {
         // redirect to login
         localStorage.clear();
@@ -72,9 +72,8 @@ function LocationsServed() {
       {zips.map((x) => (
         <div className="zip-item">
           <span>{x.zip}</span>
-          <span>
-            <span>{x.city}</span>
-          </span>
+
+          <span>{x.city}</span>
         </div>
       ))}
     </Fragment>
