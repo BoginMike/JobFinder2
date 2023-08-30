@@ -7,33 +7,31 @@ import { Button, TextField } from "@mui/material";
 import { getApiCall } from "../../shared/api-utils";
 
 function LocationsServed() {
-  // const [zips, setZips] = useState([]);
-  // const {
-  //   register,
-  //   handleSubmit,
-  //   formState: { errors },
-  // } = useForm();
-
-  // function save(data) {
-  //   console.log("zipsss1");
-  //   // getApiCall("/zips", data).then((x) => {
-  //   //   alert("zip added");
-  //   // });
-  //   getApiCall("/zips").then((response) => {
-  //     if (response?.status === true) {
-  //       setZips(response);
-  //     }
-  //   });
-  //   zips.map((x) => (
-  //     <div className="zip-item">
-  //       {/* <span>{x.zip}</span> */}
-  //       {/* <span>{x.city}</span> */}
-  //       console.log(x.zip);
-  //     </div>
-  //   ));
-  // }
-
   const [zips, setZips] = useState([]);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  function save(data) {
+    console.log("zipsss1");
+    // getApiCall("/zips", data).then((x) => {
+    //   alert("zip added");
+    // });
+    // getApiCall("/zips").then((response) => {
+    //   if (response?.status === true) {
+    //     setZips(response);
+    //   }
+    // });
+    // zips.map((x) => (
+    //   <div className="zip-item">
+    //     {/* <span>{x.zip}</span> */}
+    //     {/* <span>{x.city}</span> */}
+    //     console.log(x.zip);
+    //   </div>
+    // ));
+  }
 
   const navigate = useNavigate();
   useEffect(() => {
@@ -54,7 +52,7 @@ function LocationsServed() {
     <Fragment>
       <Header />
 
-      {/* <div className="container">
+      <div className="container">
         <form onSubmit={handleSubmit(save)}>
           <TextField label="Zip Code" {...register("zip")} />
           <br />
@@ -63,11 +61,11 @@ function LocationsServed() {
           <br />
           <br />
           {/* <FileUpload onUpload={(n) => setFileName(n)} /> */}
-      {/* <Button variant="contained" type="submit">
+          <Button variant="contained" type="submit">
             Save
           </Button>
-        </form> */}
-      {/* </div> */}
+        </form>
+      </div>
 
       {zips.map((x) => (
         <div className="zip-item">
