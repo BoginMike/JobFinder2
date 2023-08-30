@@ -20,10 +20,16 @@ function LocationsServed() {
     // });
     getApiCall("/zips", data).then((response) => {
       if (response?.status === true) {
-        console.log("zipsss");
         setZips(response);
       }
     });
+    zips.map((x) => (
+      <div className="zip-item">
+        {/* <span>{x.zip}</span> */}
+        {/* <span>{x.city}</span> */}
+        console.log(x.zip);
+      </div>
+    ));
   }
 
   return (
@@ -42,14 +48,6 @@ function LocationsServed() {
             Save
           </Button>
         </form>
-        <hr />
-        {zips.map((x) => (
-          <div className="zip-item">
-            <span>{x.zip}</span>
-            <span>{x.city}</span>
-            console.log("in map");
-          </div>
-        ))}
       </div>
     </Fragment>
   );
