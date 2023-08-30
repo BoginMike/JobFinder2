@@ -47,7 +47,7 @@ function LocationsServed() {
           <div className="zip-item">
             <span>{x.zip}</span>
             <span>{x.city}</span>
-            console.log(x.zip); console.log(x.city);
+            console.log("in map");
           </div>
         ))}
       </div>
