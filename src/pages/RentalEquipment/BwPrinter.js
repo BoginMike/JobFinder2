@@ -28,6 +28,7 @@ function BwPrinter() {
       <Header />
       {printers.map((x) => (
         <div className="ptr-item">
+          console.log("map");
           <span>
             <img src={x.ptrurl} width="600" height="556" alt="copier" />
           </span>
@@ -41,4 +42,3 @@ function BwPrinter() {
 }
 
 export default BwPrinter;
-
