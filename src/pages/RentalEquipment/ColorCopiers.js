@@ -1,8 +1,4 @@
 import React, { Fragment } from "react";
-import brochmp7001a from "../Index/webimages/brochmp7001a.png";
-import brochmp7001b from "../Index/webimages/brochmp7001b.png";
-import brochmp7001c from "../Index/webimages/brochmp7001c.png";
-import brochmp7001d from "../Index/webimages/brochmp7001d.png";
 import broch4504a from "../Index/webimages/broch4504a.png";
 import broch4504b from "../Index/webimages/broch4504b.png";
 import broch4504c from "../Index/webimages/broch4504c.png";
