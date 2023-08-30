@@ -18,7 +18,7 @@ function LocationsServed() {
     // getApiCall("/zips", data).then((x) => {
     //   alert("zip added");
     // });
-    getApiCall("/zips", data).then((response) => {
+    getApiCall("/zips").then((response) => {
       if (response?.status === true) {
         setZips(response);
       }
