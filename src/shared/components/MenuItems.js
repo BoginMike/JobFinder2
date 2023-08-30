@@ -10,18 +10,13 @@ export const MenuItems = [
     cName: "dropdown-link",
   },
   {
-    title: "Black and White Printers",
-    path: "/bwprinter",
-    cName: "dropdown-link",
-  },
-  {
     title: "Color Printers",
     path: "/clrprinter",
     cName: "dropdown-link",
   },
   {
-    title: "FaxMachines",
-    path: "/fax-machines",
+    title: "Black and White Printers",
+    path: "/bwprinter",
     cName: "dropdown-link",
   },
 ];
