@@ -17,3 +17,84 @@
 
     top: 0;
 }
+
+.desc1{
+    font: "Perpetua";
+    font-size: 45px;
+    font-weight: bold;
+    color:"#008000";
+    border-radius: 40px;
+    text-align: center;
+    width:100%;
+    height: 250px;
+    background-color: rgb(150, 177, 241);
+    /* padding: 10px; */
+    padding-top: 30px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.desc2{
+    text-align: center;
+    margin-left: 70px;
+    border-radius: 180px;
+    font: "Perpetua";
+    font-size: 22px;
+    font-weight: bold;
+    color:"#008000";
+    width:90%;
+    height: 450px;
+    background-color: rgb(164, 229, 171);
+    /* background-image: url(./webimages/copierwarehouse3.jpg);
+    background-repeat: no-repeat;
+    background-position-x: 75px;
+    background-position-y: 130px; */
+    /* padding: 10px; */
+    /* padding-top: 20px;  */
+    /* padding-bottom: 100px;  */
+    /* display: flex; */
+    /* flex-direction: row; */
+
+    gap: 15px;
+}
+
+.desc3{
+    text-align: center;
+    font: "Perpetua";
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+    /* border-radius: 180px; */
+    /* width:90%;
+    height: 450px;
+    background-color: rgb(164, 229, 171); */
+    padding: 50px;
+    /* padding-top: 30px;
+    padding-bottom: 100px; */
+    /* display: flex;
+    flex-direction: column; */
+    padding-bottom: 45px;
+}
+
+.desc4{
+    margin-left: 480px;
+    border-radius: 40px;
+    text-align: center;
+    width:40%;
+    height: 200px;
+    background-color: rgb(232, 187, 165);
+    font: "ArabBruD";
+    font-weight: bold;
+    font-size: 25px; 
+    color: #800000;
+}
+
+.desc5{
+     font:"ArabBruD";
+     font-size: 15px;
+     color: #800000;
+}
+

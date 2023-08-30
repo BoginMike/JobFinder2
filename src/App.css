@@ -47,10 +47,10 @@ body{
 
 .ptr-item{
     margin: 5px;
-    padding: 10px;
+    padding: 20px;
     border-radius: 5px;
-    height: 960px;
-    width: 960px;
+    height: 900px;
+    width: 1460px;
     font-size: 20px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
@@ -58,6 +58,16 @@ body{
     background-color: rgb(215, 215, 215);
     display: inline-flex;
     justify-content: space-between;
+}
+
+.chatpage{
+    display: inline-flex;
+    width: 500px;
+    font-size: larger;
+    gap: 10px;
+    margin: 10px;
+    border: solid gray 1px;
+    padding: 10px;   
 }
 
 .book-card{
@@ -106,4 +116,12 @@ body{
 
 .App {
     background-color: #FFFFCC;
+}
+
+.footdesc {
+    margin-right: 30px;
+    font: "Arial";
+    color: black;
+    font-weight: bold;
+    text-align: center;
 }

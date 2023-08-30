@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 import { Link }  from 'react-router-dom';
 import './Navbar.css';
 import Dropdown from './Dropdown';
+import LogoutIcon from "@mui/icons-material/Logout";
+import { useNavigate } from "react-router-dom";
+
 
 export default function Navbar() {
-  const [click, setClick] = useState(false);
+//   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
 
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
+//   const handleClick = () => setClick(!click);
+//   const closeMobileMenu = () => setClick(false);
 
   const onMouseEnter = () => {
     if (window.innerWidth < 960) {
@@ -25,6 +28,15 @@ export default function Navbar() {
       setDropdown(false);
     }
   };
+  
+  const navigate = useNavigate();
+
+  function logout() {
+    if (window.confirm("Are you sure want to logout?")) {
+      localStorage.clear();
+      navigate("/login");
+    }
+  }
 
     return (
         <div className='navbar'>
@@ -37,7 +49,7 @@ export default function Navbar() {
             </Link>
             <Link 
             onMouseEnter={onMouseEnter}
-            to={'/rental-equipment'}>
+            to={'/home'}>
                 <span className='nav-links'>
                     Rental Equipment
                 </span>
@@ -59,9 +71,9 @@ export default function Navbar() {
             </Link>
             <Link
             onMouseLeave={onMouseLeave}
-            to={'/contact'}>
+            to={'/chat'}>
                 <span className='nav-links'>
-                    Contact Us
+                    Chat With Us
                 </span>
             </Link>
             {/* <Link to={'/songs-list'}>
@@ -81,6 +93,9 @@ export default function Navbar() {
                     Customer: Signup/Login
                 </span>
             </Link>
+            <span onClick={logout}>
+              <LogoutIcon />
+            </span>
         </div>
     )
 }

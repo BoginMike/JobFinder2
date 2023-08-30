@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 import { getApiCall, patchApiCall } from '../../shared/api-utils';
 
 export default function Profile() {
-    const { register, handleSubmit, watch, formState: { errors }, setValue } = useForm();
+    const { register, handleSubmit, formState: { errors }, setValue } = useForm();
     const [fileName, setFileName] = useState('')
 
     const [user, setUser] = useState({})
@@ -23,7 +23,7 @@ export default function Profile() {
             }
            
         })
-    }, [])
+    }, [setValue])
 
 
     function onSubmit(data) {
@@ -52,13 +52,13 @@ export default function Profile() {
                     <FileUpload onUpload={uploaded} />
 
                     <div>
-                        <TextField error={errors.username} helperText={errors.username ? "username is required" : ""} {...register("username", { required: true })} label="Username" variant="outlined" />
+                        <TextField error={errors.username} helperText={errors.username ? "username is required" : ""} {...register("username", { required: true })}  variant="outlined" />
                     </div>
                     <div>
-                        <TextField type='password' {...register("password")} label="Password" />
+                        <TextField type='password' {...register("password")}  />
                     </div>
                     <div>
-                        <TextField type='text' {...register("email")} label="email" />
+                        <TextField type='text' {...register("email")}  />
                     </div>
 
 
