@@ -7,33 +7,47 @@ import { Button, TextField } from "@mui/material";
 import { getApiCall } from "../../shared/api-utils";
 
 function LocationsServed() {
+  const [found, setFound] = useState(false);
+  const navigate = useNavigate();
   const [zips, setZips] = useState([]);
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    // formState: { errors },
   } = useForm();
 
-  function save(data) {
-    console.log("zipsss1");
-    // getApiCall("/zips", data).then((x) => {
-    //   alert("zip added");
+  function Save(data) {
+    let flag = false;
+    zips.forEach((x) => {
+      if (x.zip === data.zip) {
+        // setTimeout(() => {
+        // if (!found) {
+        //   alert("No");
+        //   return data.zip;
+        // }
+        setFound(true);
+        // }, [3000]);
+        flag = true;
+
+        alert(
+          "Your location is in our delivery area. Please click the Home Page link and contact us!"
+        );
+        return x.zip;
+      }
+    });
+    // return data.zip;
+    // setTimeout(() => {
+    if (!flag) {
+      alert("No");
+      return data.zip;
+    }
     // });
-    // getApiCall("/zips").then((response) => {
-    //   if (response?.status === true) {
-    //     setZips(response);
-    //   }
-    // });
-    // zips.map((x) => (
-    //   <div className="zip-item">
-    //     {/* <span>{x.zip}</span> */}
-    //     {/* <span>{x.city}</span> */}
-    //     console.log(x.zip);
-    //   </div>
-    // ));
+    // if (found === false) {
+    //   alert("no");
+    //   return data.zip;
+    // }
   }
 
-  const navigate = useNavigate();
   useEffect(() => {
     // on page load this code will ge execute
     // componentDidMount()
@@ -51,9 +65,8 @@ function LocationsServed() {
   return (
     <Fragment>
       <Header />
-
       <div className="container">
-        <form onSubmit={handleSubmit(save)}>
+        <form onSubmit={handleSubmit(Save)}>
           <TextField label="Zip Code" {...register("zip")} />
           <br />
           <br />
@@ -66,14 +79,6 @@ function LocationsServed() {
           </Button>
         </form>
       </div>
-
-      {zips.map((x) => (
-        <div className="zip-item">
-          <span>{x.zip}</span>
-
-          <span>{x.city}</span>
-        </div>
-      ))}
     </Fragment>
   );
 }
