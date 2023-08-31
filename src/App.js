@@ -5,7 +5,6 @@ import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
 import Home from "./pages/Index/Index";
 import AboutUs from "./pages/AboutUs/About";
-// import AddSong from "./pages/AddSong/AddSong";
 import AddZip from "./pages/AddZip/AddZip";
 import Chat from "./pages/Chat/Chat";
 import RentalEquipment from "./pages/RentalEquipment/RentalEquipment";
@@ -17,8 +16,14 @@ import ColorPrinter from "./pages/RentalEquipment/ColorPrinter";
 import ProtectedRoute from "./shared/components/ProtectedRoute";
 import NotFoundPage from "./shared/components/NotFoundPage";
 import Profile from "./pages/Profile/Profile";
-
+// import "./pages/chat/chat.scss";
+// import socketClient from "socket.io-client";
+// const SERVER = "http://127.0.0.1:8080";
 function App() {
+  // var socket = socketClient(SERVER);
+  // socket.on("connection", () => {
+  //   console.log(`I'm connected with the back-end`);
+  // });
   return (
     <div className="App">
       <Routes>
