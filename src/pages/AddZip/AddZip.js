@@ -27,10 +27,10 @@ export default function AddZip() {
         <form onSubmit={handleSubmit(save)}>
           <TextField label="Zip Code" {...register("zip")} />
           <br />
-          <br />
+          {/* <br />
           <TextField label="City" {...register("city")} />
           <br />
-          <br />
+          <br /> */}
           {/* <FileUpload onUpload={(n) => setFileName(n)} /> */}
           <Button variant="contained" type="submit">
             Save
