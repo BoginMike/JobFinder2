@@ -3,7 +3,7 @@ import Header from "../../shared/components/Header";
 import { useForm } from "react-hook-form";
 import { Button, TextField } from "@mui/material";
 import { postApiCall } from "../../shared/api-utils";
-import FileUpload from "../../shared/components/FileUpload";
+// import FileUpload from "../../shared/components/FileUpload";
 
 export default function AddZip() {
   const {
@@ -17,6 +17,7 @@ export default function AddZip() {
     // data["zip"] = fileName;
     postApiCall("/zips", data).then((x) => {
       alert("zip added");
+      console.log("zip added");
     });
   }
 
