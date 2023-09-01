@@ -66,13 +66,25 @@ function LocationsServed() {
     <Fragment>
       <Header />
       <div className="container">
+        <h3>
+          We deliver to many areas along the east coast between
+          <br /> southern Connecticut and Norfolk Virginia and west to
+          <br />
+          Harrisburg Pennsylvania. We also deliver to the Pittsburgh <br />
+          area. Please enter your desired delivery location's zipcode.
+          <br />
+          If it matches you will see an alert confirming this.
+          <br /> Then contact us to order your equipment. <br />
+          Otherwise you will see an alert saying your zipcode is <br />
+          not in our delivery area.
+        </h3>
         <form onSubmit={handleSubmit(Save)}>
           <TextField label="Zip Code" {...register("zip")} />
           <br />
-          <br />
+          {/* <br />
           <TextField label="City" {...register("city")} />
           <br />
-          <br />
+          <br /> */}
           {/* <FileUpload onUpload={(n) => setFileName(n)} /> */}
           <Button variant="contained" type="submit">
             Save
