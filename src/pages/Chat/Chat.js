@@ -1,5 +1,15 @@
-import { React, Fragment } from "react";
+import React, { Fragment } from "react";
+import ChatLogin from "../ChatLogin/ChatLogin";
+import Header from "../../shared/components/Header";
+import "./chat.css";
 
-export default function Chat() {
-  return <Fragment>Home</Fragment>;
+function Chat() {
+  return (
+    <Fragment>
+      <Header />
+      <ChatLogin />
+    </Fragment>
+  );
 }
+
+export default Chat;

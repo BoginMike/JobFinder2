@@ -7,6 +7,7 @@ import Home from "./pages/Index/Index";
 import AboutUs from "./pages/AboutUs/About";
 import AddZip from "./pages/AddZip/AddZip";
 import Chat from "./pages/Chat/Chat";
+import StartChat from "./pages/Chat/StartChat";
 import RentalEquipment from "./pages/RentalEquipment/RentalEquipment";
 import Locations from "./pages/LocationsServed/LocationsServed";
 import ColorCopiers from "./pages/RentalEquipment/ColorCopiers";
@@ -38,6 +39,7 @@ function App() {
         <Route path="/bwcopiers" element={<BwCopiers />}></Route>
         <Route path="/bwprinter" element={<BwPrinter />}></Route>
         <Route path="/clrprinter" element={<ColorPrinter />}></Route>
+        <Route path="/startchat" element={<StartChat />}></Route>
         <Route
           path="/add-zip"
           element={

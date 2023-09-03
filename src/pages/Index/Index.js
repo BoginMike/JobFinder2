@@ -10,8 +10,8 @@ function Index() {
       <div className="desc1">
         We RENT Copiers, Fax Machines &amp; Printers for use in
         Pennsylvania(east of Harrisburg), New Jersey, Delaware (parts of
-        Maryland), Washington, DC, New York (parts of Conn), Virginia and
-        Pittsburgh.
+        Maryland), Washington, DC, Southern New York, Southern Connecticut,
+        Virginia and Pittsburgh.
       </div>
       <div className="desc2">
         <div className="desc3">
@@ -66,4 +66,3 @@ function Index() {
 }
 
 export default Index;
-

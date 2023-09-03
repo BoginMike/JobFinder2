@@ -59,7 +59,10 @@ body{
     display: inline-flex;
     justify-content: space-between;
 }
-
+.about {
+    font-family: Arial;
+    color: black;
+}
 .chatpage{
     display: inline-flex;
     width: 500px;

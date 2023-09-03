@@ -30,7 +30,7 @@ function LocationsServed() {
         flag = true;
 
         alert(
-          "Your location is in our delivery area. Please click the Home Page link and contact us!"
+          "Your zip code is in our delivery area. Please click the Home Page link and contact us!"
         );
         return x.zip;
       }
@@ -38,7 +38,7 @@ function LocationsServed() {
     // return data.zip;
     // setTimeout(() => {
     if (!flag) {
-      alert("No");
+      alert("Sorry, This zipcode is not in our delivery area.");
       return data.zip;
     }
     // });

@@ -14,7 +14,7 @@ export default function Signup() {
         data['profilePicture'] = fileName;
         postApiCall('/users', data)
             .then(r => {
-                if (r == "User Created") {
+                if (r === "User Created") {
                     navigate('/login')
                 }else{
                     window.alert("Something went wrong")
