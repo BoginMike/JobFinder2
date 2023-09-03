@@ -1,7 +1,6 @@
 import React, { useEffect, useState, Fragment } from "react";
 import jwt_decode from "jwt-decode";
 // import { Avatar } from "@mui/material";
-// import LogoutIcon from "@mui/icons-material/Logout";
 import { getApiCall } from "../../shared/api-utils";
 // import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
@@ -148,7 +147,7 @@ export default function Header() {
                 height="165"
                 alt="Phila Philly Philadelphia"
               />
-              &nbsp;{" "}
+              &nbsp;
             </font>
             <font size="6" color="#0000FF">
               <img
@@ -160,7 +159,7 @@ export default function Header() {
               />
             </font>
             <font size="6" color="#0000FF">
-              &nbsp;&nbsp;{" "}
+              &nbsp;&nbsp;
             </font>
             <img
               border="0"
