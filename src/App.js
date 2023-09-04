@@ -45,9 +45,9 @@ function App() {
         <Route
           path="/add-zip"
           element={
-            <ProtectedRoute>
-              <AddZip />
-            </ProtectedRoute>
+            // <ProtectedRoute>
+            <AddZip />
+            // </ProtectedRoute>
           }
         ></Route>
         <Route
