@@ -10,8 +10,8 @@ export default function ProtectedRoute({ children }) {
 
             setValid(true)
 
-        // } else {
-        //     navigate('/login')
+        } else {
+            navigate('/login')
         }
     }, [navigate])
     return (
