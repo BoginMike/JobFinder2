@@ -42,22 +42,8 @@ function App() {
         <Route path="/bwprinter" element={<BwPrinter />}></Route>
         <Route path="/clrprinter" element={<ColorPrinter />}></Route>
         <Route path="/startchat" element={<StartChat />}></Route>
-        <Route
-          path="/add-zip"
-          element={
-            // <ProtectedRoute>
-            <AddZip />
-            // </ProtectedRoute>
-          }
-        ></Route>
-        <Route
-          path="/chat"
-          element={
-            // <ProtectedRoute>
-            <Chat />
-            // </ProtectedRoute>
-          }
-        ></Route>
+        <Route path="/add-zip" element={<AddZip />}></Route>
+        <Route path="/chat" element={<Chat />}></Route>
         <Route
           path="/profile"
           element={
