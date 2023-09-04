@@ -36,7 +36,7 @@ function App() {
         <Route path="/about-us" element={<AboutUs />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/sign-up" element={<Signup />}></Route>
-        <Route path="/signin-chat" element={<SignOnChat />}></Route>
+        <Route path="/signon-chat" element={<SignOnChat />}></Route>
         <Route path="/locations-served" element={<Locations />}></Route>
         <Route path="/rental-equipment" element={<RentalEquipment />}></Route>
         <Route path="/colorcopiers" element={<ColorCopiers />}></Route>
