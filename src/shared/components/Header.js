@@ -2,7 +2,6 @@ import React, { useEffect, useState, Fragment } from "react";
 import jwt_decode from "jwt-decode";
 // import { Avatar } from "@mui/material";
 import { getApiCall } from "../../shared/api-utils";
-// import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import twit from "../../pages/Index/webimages/twitter.png";
 import face from "../../pages/Index/webimages/facebook.png";
@@ -15,15 +14,14 @@ import wash from "../../pages/Index/webimages/washington-dc2.jpg";
 import AC from "../../pages/Index/webimages/ac1.jpg";
 
 export default function Header() {
+  // For users that do not wish to sign in, a guest login is created.
+  //When they signup guest will be overwritten.
   const [username, setUsername] = useState("guest");
   const [password, setPassword] = useState("guest");
-
-  // const navigate = useNavigate();
 
   useEffect(() => {
     let token = localStorage.getItem("token");
     if (token) {
-      console.log("here in header");
       let decoded = jwt_decode(token);
       setUsername(decoded.username);
     } else {
@@ -32,16 +30,14 @@ export default function Header() {
         password: password,
       }).then((response) => {
         // response is json response sent from the server
-        console.log(response.token);
         if (response.token) {
           // username and passord is correct and token is generated successfully.
           localStorage.setItem("token", response.token);
-          console.log(username);
         }
       });
     }
   }, [username, password]);
-  console.log("outside get");
+
   // Brought over from old program to recreate look....some things will be updated.
   return (
     <Fragment>
