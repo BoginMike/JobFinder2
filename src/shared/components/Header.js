@@ -41,7 +41,7 @@ export default function Header() {
       });
     }
   }, [username, password]);
-  //  console.log(username);
+  console.log("outside get");
   // Brought over from old program to recreate look....some things will be updated.
   return (
     <Fragment>
