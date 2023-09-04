@@ -23,6 +23,7 @@ export default function Header() {
   useEffect(() => {
     let token = localStorage.getItem("token");
     if (token) {
+      console.log("here in header");
       let decoded = jwt_decode(token);
       setUsername(decoded.username);
     } else {
@@ -31,13 +32,16 @@ export default function Header() {
         password: password,
       }).then((response) => {
         // response is json response sent from the server
+        console.log(response.token);
         if (response.token) {
           // username and passord is correct and token is generated successfully.
           localStorage.setItem("token", response.token);
+          console.log(username);
         }
       });
     }
   }, [username, password]);
+  //  console.log(username);
   // Brought over from old program to recreate look....some things will be updated.
   return (
     <Fragment>
