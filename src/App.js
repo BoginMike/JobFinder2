@@ -3,6 +3,7 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
+import SignOnChat from "./pages/Chat/SignOnChat";
 import Home from "./pages/Index/Index";
 import AboutUs from "./pages/AboutUs/About";
 import AddZip from "./pages/AddZip/AddZip";
@@ -35,6 +36,7 @@ function App() {
         <Route path="/about-us" element={<AboutUs />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/sign-up" element={<Signup />}></Route>
+        <Route path="/signin-chat" element={<SignOnChat />}></Route>
         <Route path="/locations-served" element={<Locations />}></Route>
         <Route path="/rental-equipment" element={<RentalEquipment />}></Route>
         <Route path="/colorcopiers" element={<ColorCopiers />}></Route>

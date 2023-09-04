@@ -46,8 +46,8 @@ function About() {
               2. Once all the errors were resolved I added a header section to
               be shown on every page and a navbar to get to the other pages I am
               creating. While building this new version of my old site I tried
-              to employ as many of the react features that I learned from Sachin
-              in the prism lectures and from Kabir and Sagar in the live
+              to employ as many of these react features that I learned from
+              Sachin in the prism lectures and from Kabir and Sagar in the live
               lectures. I included hooks, some classes but mostly functions
               (like arrow functions and some maps). Many of the react features
               we only briefly touched on in the live sessions and I have not
@@ -139,8 +139,8 @@ function About() {
               Sagar’s routines were doing and then write my own routines for the
               copier and printer rental stuff. I was able to use some of his
               ideas for the users and handling of some of the API calls, since
-              other than the one day we worked on this we were not taught much
-              about this part.
+              other than the couple days we worked on this we were not taught
+              much about this part.
             </li>
             <li>
               11. I went on the zoom doubt clearing session for help with some
