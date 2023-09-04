@@ -13,7 +13,7 @@ export default function ProtectedRoute({ children }) {
         } else {
             navigate('/login')
         }
-    }, [])
+    }, [navigate])
     return (
         <>
             {

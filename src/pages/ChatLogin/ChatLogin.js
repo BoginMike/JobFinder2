@@ -1,9 +1,9 @@
-import React, { useState, Fragment, createContext } from "react";
+import React, { useState, Fragment } from "react";
 import { useNavigate } from "react-router-dom";
 import { getApiCall } from "../../shared/api-utils";
 import { Button, TextField } from "@mui/material";
 
-export default function ChatLogin(user) {
+export default function ChatLogin() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -30,11 +30,10 @@ export default function ChatLogin(user) {
       }
     });
   }
-  user = createContext(username);
+  sessionStorage.setItem("username", username);
   return (
     <Fragment>
       <h2>
-        {" "}
         To let us know who we will be chatting with
         <br />
         please signup or login below.

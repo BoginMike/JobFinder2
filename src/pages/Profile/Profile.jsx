@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../../shared/components/Header'
-import { Avatar, Button, TextField } from '@mui/material'
-import FileUpload from '../../shared/components/FileUpload'
+import { Button, TextField } from '@mui/material'
+// import FileUpload from '../../shared/components/FileUpload'
 import { useForm } from 'react-hook-form';
 import { getApiCall, patchApiCall } from '../../shared/api-utils';
 
 export default function Profile() {
     const { register, handleSubmit, formState: { errors }, setValue } = useForm();
-    const [fileName, setFileName] = useState('')
+
 
     const [user, setUser] = useState({})
 
@@ -19,7 +19,7 @@ export default function Profile() {
                 setValue('username',data.username)
                 setValue('password',data.password)
                 setValue('email',data.email)
-                setFileName(data.profilePicture)
+                // future stuff setFileName(data.profilePicture)
             }
            
         })
@@ -27,29 +27,29 @@ export default function Profile() {
 
 
     function onSubmit(data) {
-        data['profilePicture'] = fileName;
+        // future stuff data['profilePicture'] = fileName;
         data['_id'] = user._id
         patchApiCall('/users', data)
             .then(r => {
 
             })
     }
-
-    function uploaded(fname) {
-        setFileName(fname)
-    }
+     // future stuff - to add in a user image
+    // function uploaded(fname) {
+    //     setFileName(fname)
+    // }
     return (
         <div>
             <Header />
             <div>
                 <form onSubmit={handleSubmit(onSubmit)}>
 
-                    <div>
+                    {/* futire stuff <div>
                         <Avatar src={process.env.REACT_APP_BASE_URL + '/image/' + user.profilePicture} />
                     </div>
 
                     <h4>Upload new image</h4>
-                    <FileUpload onUpload={uploaded} />
+                    <FileUpload onUpload={uploaded} /> */}
 
                     <div>
                         <TextField error={errors.username} helperText={errors.username ? "username is required" : ""} {...register("username", { required: true })}  variant="outlined" />

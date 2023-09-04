@@ -10,7 +10,7 @@ export default function Navbar() {
 //   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
 
-//   const handleClick = () => setClick(!click);
+//  future stuff for mobile const handleClick = () => setClick(!click);
 //   const closeMobileMenu = () => setClick(false);
 
   const onMouseEnter = () => {
@@ -76,11 +76,6 @@ export default function Navbar() {
                     Chat With Us
                 </span>
             </Link>
-            {/* <Link to={'/songs-list'}>
-                <span className='app-link'>
-                    Song List
-                </span>
-            </Link>*/}
             <Link to={'/add-zip'}>
                 <span className='app-link'>
                     Add Zip Code

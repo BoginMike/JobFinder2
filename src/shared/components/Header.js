@@ -38,7 +38,7 @@ export default function Header() {
       });
     }
   }, [username, password]);
-
+  // Brought over from old program to recreate look....some things will be updated.
   return (
     <Fragment>
       <div className="Index"></div>

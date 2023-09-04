@@ -7,26 +7,14 @@ import { Button, TextField } from "@mui/material";
 import { getApiCall } from "../../shared/api-utils";
 
 function LocationsServed() {
-  const [found, setFound] = useState(false);
   const navigate = useNavigate();
   const [zips, setZips] = useState([]);
-  const {
-    register,
-    handleSubmit,
-    // formState: { errors },
-  } = useForm();
+  const { register, handleSubmit } = useForm();
 
   function Save(data) {
     let flag = false;
     zips.forEach((x) => {
       if (x.zip === data.zip) {
-        // setTimeout(() => {
-        // if (!found) {
-        //   alert("No");
-        //   return data.zip;
-        // }
-        setFound(true);
-        // }, [3000]);
         flag = true;
 
         alert(
@@ -35,17 +23,10 @@ function LocationsServed() {
         return x.zip;
       }
     });
-    // return data.zip;
-    // setTimeout(() => {
     if (!flag) {
       alert("Sorry, This zipcode is not in our delivery area.");
       return data.zip;
     }
-    // });
-    // if (found === false) {
-    //   alert("no");
-    //   return data.zip;
-    // }
   }
 
   useEffect(() => {
@@ -81,10 +62,10 @@ function LocationsServed() {
         <form onSubmit={handleSubmit(Save)}>
           <TextField label="Zip Code" {...register("zip")} />
           <br />
-          {/* <br />
+          {/* <br /> future stuff
           <TextField label="City" {...register("city")} />
           <br />
-          <br /> */}
+          <br /> future stuff*/}
           {/* <FileUpload onUpload={(n) => setFileName(n)} /> */}
           <Button variant="contained" type="submit">
             Save

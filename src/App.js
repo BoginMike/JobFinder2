@@ -17,14 +17,17 @@ import ColorPrinter from "./pages/RentalEquipment/ColorPrinter";
 import ProtectedRoute from "./shared/components/ProtectedRoute";
 import NotFoundPage from "./shared/components/NotFoundPage";
 import Profile from "./pages/Profile/Profile";
-// import "./pages/chat/chat.scss";
+
+// for socketio chat...not implementing yet: import "./pages/chat/chat.scss";
 // import socketClient from "socket.io-client";
 // const SERVER = "http://127.0.0.1:8080";
+
 function App() {
   // var socket = socketClient(SERVER);
   // socket.on("connection", () => {
   //   console.log(`I'm connected with the back-end`);
   // });
+
   return (
     <div className="App">
       <Routes>
@@ -32,7 +35,6 @@ function App() {
         <Route path="/about-us" element={<AboutUs />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/sign-up" element={<Signup />}></Route>
-        <Route path="/chat" element={<Chat />}></Route>
         <Route path="/locations-served" element={<Locations />}></Route>
         <Route path="/rental-equipment" element={<RentalEquipment />}></Route>
         <Route path="/colorcopiers" element={<ColorCopiers />}></Route>
@@ -45,6 +47,14 @@ function App() {
           element={
             <ProtectedRoute>
               <AddZip />
+            </ProtectedRoute>
+          }
+        ></Route>
+        <Route
+          path="/chat"
+          element={
+            <ProtectedRoute>
+              <Chat />
             </ProtectedRoute>
           }
         ></Route>

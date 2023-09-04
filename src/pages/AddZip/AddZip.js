@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "../../shared/components/Header";
 import { useForm } from "react-hook-form";
 import { Button, TextField } from "@mui/material";
@@ -6,13 +6,10 @@ import { postApiCall } from "../../shared/api-utils";
 // import FileUpload from "../../shared/components/FileUpload";
 
 export default function AddZip() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+  const { register, handleSubmit } = useForm();
   // const [fileName, setFileName] = useState("");
 
+  // on submit comes here
   function save(data) {
     // data["zip"] = fileName;
     postApiCall("/zips", data).then((x) => {

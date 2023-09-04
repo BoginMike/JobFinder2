@@ -1,17 +1,16 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment } from 'react'
 import { postApiCall } from '../../shared/api-utils'
 import { useForm } from "react-hook-form";
 import { Button, TextField } from '@mui/material';
-import FileUpload from '../../shared/components/FileUpload';
+// import FileUpload from '../../shared/components/FileUpload';
 import { useNavigate } from 'react-router-dom';
 import Header from '../../shared/components/Header';
 
 export default function Signup() {
     const navigate = useNavigate()
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const [fileName, setFileName] = useState('')
+    const { register, handleSubmit,  formState: { errors } } = useForm();
     function onSubmit(data) {
-        data['profilePicture'] = fileName;
+        //future stuff  data['profilePicture'] = fileName;
         postApiCall('/users', data)
             .then(r => {
                 if (r === "User Created") {
@@ -21,10 +20,11 @@ export default function Signup() {
                 }
             })
     }
-
-    function uploaded(fname) {
-        setFileName(fname)
-    }
+    
+    // future stuff
+    // function uploaded(fname) {
+    //     setFileName(fname)
+    // }
 
     return (
         <Fragment>
@@ -38,7 +38,7 @@ export default function Signup() {
 
                     <TextField type='text' {...register("email")} label="email" />
 
-                    <FileUpload onUpload={uploaded} />
+                    {/* future stuff <FileUpload onUpload={uploaded} /> */}
 
                     <Button type="submit" variant='contained' > SIGNUP</Button>
                 </form>
@@ -47,32 +47,5 @@ export default function Signup() {
     )
 }
 
-
-// export default function Signup() {
-
-//     const [username, setUsername] = useState('')
-//     const [password, setPassword] = useState('')
-
-//     const navigate = useNavigate()
-
-//     function signUp() {
-//         let user = { username: username, password: password }
-//         postApiCall('/users', user)
-//             .then(response => {
-//                 alert(response)
-//                 navigate('/login')
-//             })
-//     }
-
-//     return (
-//         <div className='login-page'>
-//             <div className='login-container'>
-//                 <input type='text' placeholder='Username' value={username} onChange={e => setUsername(e.target.value)} />
-//                 <input type='password' placeholder='Password' value={password} onChange={e => setPassword(e.target.value)} />
-//                 <button onClick={signUp}>Sign Up</button>
-//             </div>
-//         </div>
-//     )
-// }
 
 
