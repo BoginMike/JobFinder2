@@ -53,7 +53,6 @@ export default function ChatLogin() {
             placeholder="Password"
           />
           <Button onClick={chatlogin}>Log in</Button>
-          {/* <a href="/profile"> Update Profile</a> */}
           <a href="/signon-chat"> Create Account</a>
         </div>
       </div>
