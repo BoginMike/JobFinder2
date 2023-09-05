@@ -2,6 +2,15 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+The following commands below were what I used before deploying the frontend. Vercel took care of building the project 
+from this github repository. 
+The link to the frontend is https://copier-rental-fe.vercel.app/
+The link to the backend is https://copierbe.onrender.com
+The free version seems to spin down after a time so if the site is not working right please refresh the render link.
+
+I wrote a project history which I was going to put here but instead you can find it in the ABOUT link on the website.
+
+
 ## Available Scripts
 
 In the project directory, you can run:
