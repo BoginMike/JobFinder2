@@ -39,20 +39,20 @@ function About() {
               initially about 100 errors – mostly renaming classes and also
               closing tags for images and other items. I used create-react-app
               to get the initial react structure. My goal was to keep the look
-              of the site as much as possible, while adding a lot more
+              of the original site as much as possible, while adding a lot more
               functionality.
             </li>
             <li>
               2. Once all the errors were resolved I added a header section to
               be shown on every page and a navbar to get to the other pages I am
               creating. While building this new version of my old site I tried
-              to employ as many of these react features that I learned from
+              to employ as many of the react features that I learned from
               Sachin in the prism lectures and from Kabir and Sagar in the live
               lectures. I included hooks, some classes but mostly functions
-              (like arrow functions and some maps). Many of the react features
-              we only briefly touched on in the live sessions and I have not
-              done the mongodb prism lecture yet but was able to figure out the
-              mongodb from some of the stuff Sagar taught plus reading their
+              (like arrow functions and some maps). Many of these react features
+              we only briefly touched on in the live sessions, and I have not
+              done the mongodb prism lecture yet, but was able to figure out the
+              mongodb from some of the stuff Sagar taught us, plus reading their
               docs and doing some YouTube lessons on it.
             </li>
             <li>
@@ -64,7 +64,7 @@ function About() {
               The backend connected to the mongo database (initially locally but
               figured out how to make it work from the internet). I downloaded
               mongo atlas to enter some test data, but eventually would read and
-              write to mongo using my code.
+              write to mongodb using my code.
             </li>
             <li>
               4. To be able to switch paths I created a navbar.js routine. In
@@ -83,8 +83,8 @@ function About() {
             </li>
             <li>
               6. Next, although in this type of project I was not sure how I
-              would use it I created a customer signup/login routine. I added a
-              footer with the company address and since I have the phone number
+              would use it, I created a customer signup/login routine. I added a
+              footer with the company address, and since I have the phone number
               and email in the header section I decided to scrap the contact
               page and make it a chat-with-us page. I created another page
               called locations-served to let customers see if their delivery
@@ -96,13 +96,13 @@ function About() {
             <li>
               7. I added a signup page and profile page where a user can update
               their information. I gave the profile route protection since it
-              has customer information on it. During testing when I was not
+              could have customer information on it. During testing when I was not
               logged in or a token was not yet generated you would be redirected
               to the login page if you tried to access the profile page.
             </li>
             <li>
               8. I created a Rental Equipment link to display the equipment we
-              rent but used this as an opportunity to learn how to do a dropdown
+              rent but decided to use this as an opportunity to learn how to do a dropdown
               menu in React (Since we never learned this in this course, I
               watched a YouTube video on this). In one of the dropdown links I
               added some pictures by importing them from an images directory and
@@ -120,13 +120,13 @@ function About() {
             </li>
             <li>
               9. The next feature was getting the Locations-Served page to work.
-              The original idea was to display a map and when you click on it
+              The original idea was to display a map, and clicking on it
               would tell if we delivered to that area, you also could search by
               zip code or city/state. This became too complicated, so I scaled
               the routine down for now to enter a zip code in a useForm hook and
               compare it to one stored in the database. If it is there it sends
-              a confirmation alert or if not, sorry this zip code is not in our
-              delivery area alert. To easily add the zip codes, I created an
+              a "confirmation alert" or if not, "sorry this zip code is not in our
+              delivery area alert". To easily add the zip codes, I created an
               add-zip routine and put it in the navbar. In the final version for
               the web, I will remove it.
             </li>
@@ -179,7 +179,7 @@ function About() {
             </li>
             <li>
               15. For deploying this project, I tried Heroku, but it seemed like
-              you had to pay, and it was complicated also. So, I went with
+              you had to pay for it now, and it was complicated also. So, I went with
               Vercel for the frontend and Render for the backend. So far it has
               been free to use and has worked pretty well.
             </li>
