@@ -45,10 +45,10 @@ function ListBox({
       newSelections = newSelections.filter((selection) => selection !== item);
     }
 
-    setSelectedValues("job " + newSelections);
+    setSelectedValues(newSelections);
     setFilterText("");
     onFilter("");
-    onSelected(newSelections);
+    onSelected(item, newSelections);
   };
 
   return (
@@ -63,7 +63,7 @@ function ListBox({
         <input
           className="full-width"
           type="text"
-          // placeholder={selectedValues.join(" job: ")}
+          placeholder={selectedValues.join(", ")}
           onChange={(e) => onFilter(e.target.value)}
           value={filterText}
         />
