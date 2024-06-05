@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react'
-import { postApiCall } from '../../shared/api-utils'
+import { postApiCall } from '../../api-utils'
 import { useForm } from "react-hook-form";
 import { Button, TextField } from '@mui/material';
 // import FileUpload from '../../shared/components/FileUpload';
 import { useNavigate } from 'react-router-dom';
-import Header from '../../shared/components/Header';
+// import Header from '../../shared/components/Header';
 
 export default function Signup() {
     const navigate = useNavigate()
@@ -28,7 +28,7 @@ export default function Signup() {
 
     return (
         <Fragment>
-            <Header />
+            {/* <Header /> */}
             <div className='login-page'>
                 <form className='login-container' onSubmit={handleSubmit(onSubmit)}>
 

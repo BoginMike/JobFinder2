@@ -1,8 +1,8 @@
 import React, { useState, Fragment } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { getApiCall } from '../../shared/api-utils';
+import { getApiCall } from '../../api-utils';
 import { Button, TextField } from '@mui/material';
-import Header from '../../shared/components/Header';
+// import Header from '../../components/Header';
 
 export default function Login() {
  
@@ -24,7 +24,7 @@ export default function Login() {
                 // username and passord is correct and token is generated successfully.
                 localStorage.setItem('token', response.token)
                 //navigate user to Home page
-                navigate('/home')
+                navigate('/jobtypes')
 
             } else {
                 // something went wrong
@@ -36,7 +36,7 @@ export default function Login() {
 
     return (
         <Fragment> 
-            <Header />
+            {/* <Header /> */}
             <div className='login-page'>
                 <div className='login-container'>
                     <TextField value={username} onChange={x => setUsername(x.target.value)} type='text' placeholder='Username' />

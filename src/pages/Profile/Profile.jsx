@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import Header from '../../shared/components/Header'
+// import Header from '../../shared/components/Header'
 import { Button, TextField } from '@mui/material'
 // import FileUpload from '../../shared/components/FileUpload'
 import { useForm } from 'react-hook-form';
-import { getApiCall, patchApiCall } from '../../shared/api-utils';
+import { getApiCall, patchApiCall } from '../../api-utils';
 
 export default function Profile() {
     const { register, handleSubmit, formState: { errors }, setValue } = useForm();
@@ -40,7 +40,7 @@ export default function Profile() {
     // }
     return (
         <div>
-            <Header />
+            {/* <Header /> */}
             <div>
                 <form onSubmit={handleSubmit(onSubmit)}>
 
