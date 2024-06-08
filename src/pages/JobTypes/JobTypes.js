@@ -1,6 +1,7 @@
 import React from "react";
 import ListBox from "./ListBox";
-import { countryList } from "../../util/countries.js";
+import "./JobTypes.css";
+import { jobTypesList } from "../../util/jobtypes.js";
 // import { useForm } from "react-hook-form";
 // import { Button, TextField } from "@mui/material";
 // import { postApiCall } from "../../api-utils";
@@ -20,7 +21,10 @@ export default function JobTypes() {
   // }
   return (
     <div>
-      <ListBox list={countryList} widthPct={40} />
+      <div className="jtTitle">
+        <h2>Select a Job Type or multiple Jobs Types from the list below.</h2>
+      </div>
+      <ListBox list={jobTypesList} widthPct={40} />
     </div>
   );
 }
