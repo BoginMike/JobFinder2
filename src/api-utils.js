@@ -16,6 +16,9 @@ export function postApiCall(url, body, headers) {
   console.log(url);
   console.log(body);
 
+  let jsonBody = JSON.stringify(body);
+  console.log(jsonBody);
+
   return fetch(getBaseUrl() + url, {
     headers: {
       token: localStorage.getItem("token"),
@@ -23,7 +26,7 @@ export function postApiCall(url, body, headers) {
       ...headers,
     },
     method: "POST",
-    body: JSON.stringify(body),
+    body: jsonBody,
   }).then((x) => x.json());
 }
 

@@ -9,7 +9,7 @@ import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
 // import SignOnChat from "./pages/Chat/SignOnChat";
 import Home from "./pages/Index/Products";
-//import AddZip from "./pages/AddZip/AddZip";
+import AddZip from "./pages/AddZip/AddZip";
 // import Chat from "./pages/Chat/Chat";
 // import StartChat from "./pages/Chat/StartChat";
 import JobTypes from "./pages/JobTypes/JobTypes";
@@ -75,6 +75,7 @@ function App() {
           <Route path="/salaryrange" element={<SalaryRange />}></Route>
           <Route path="/searches" element={<Searches />}></Route>
           <Route path="/sign-up" element={<Signup />}></Route>
+          <Route path="/zips" element={<AddZip />}></Route>
           {/* <Route path="/chat" element={<Chat />}></Route> */}
           <Route
             path="/profile"
