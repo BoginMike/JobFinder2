@@ -11,6 +11,7 @@ export default function AddZip() {
 
   // on submit comes here
   function save(data) {
+    console.log(data);
     // data["zip"] = fileName;
     postApiCall("/zips", data).then((x) => {
       alert("zip added");

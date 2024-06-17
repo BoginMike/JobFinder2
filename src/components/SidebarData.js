@@ -79,6 +79,12 @@ export const SidebarData = [
     icon: <MdIcons.MdSearch />,
     cName: "nav-text",
   },
+  {
+    title: "Zip",
+    path: "/zips",
+    icon: <MdIcons.MdZoomIn />,
+    cName: "nav-text",
+  }
   // {
   //   title: 'AIEngine',
   //   path: "/aiengine",

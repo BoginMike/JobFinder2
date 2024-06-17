@@ -24,7 +24,7 @@ export default function JobTypes() {
       <div className="jtTitle">
         <h2>Select a Job Type or multiple Jobs Types from the list below.</h2>
       </div>
-      <ListBox list={countryList} widthPct={40} />
+      <ListBox list={countryList} widthPct={80} />
     </div>
   );
 }
